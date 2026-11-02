@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#10191c" />
+    <meta
+      name="description"
+      content="Forge Deploy: do seu código à versão publicada. Uma plataforma local de deploy em Rust."
+    />
+    <title>Forge Deploy — Seu código, no ar.</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/mark.svg" />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <noscript
+      >O painel usa WebAssembly. Habilite JavaScript para acessar sua central de
+      deploy.</noscript
+    >
+    <div id="boot" role="status">Preparando sua central de deploy…</div>
+    <script type="module">
+      import init from "/assets/pkg/forge_deploy_ui.js";
+      init()
+        .then(() => document.getElementById("boot")?.remove())
+        .catch(() => {
+          document.getElementById("boot").textContent =
+            "Não foi possível carregar o painel. Recarregue a página ou confira a documentação de execução.";
+        });
+    </script>
+  </body>
+</html>

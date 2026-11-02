@@ -1,0 +1,15 @@
+/target/
+.env
+.env.*
+!.env.example
+*.log
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+
+.tools/
+.forge/
+crates/app/assets/pkg/
+
+__pycache__/
+*.pyc

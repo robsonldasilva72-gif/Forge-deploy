@@ -1,0 +1,15 @@
+[package]
+name = "forge-deploy-db"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+forge-deploy-core = { path = "../core" }
+chrono.workspace = true
+serde.workspace = true
+sqlx.workspace = true
+uuid.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
